@@ -19,5 +19,11 @@ RSpec.describe LeapYear do
         expect(LeapYear.new.leap_year?(1800)).to be false
       end
     end
+
+    context 'when year is divisible by 400' do
+      it 'returns true' do
+        expect(LeapYear.new.leap_year?(1600)).to be true
+      end
+    end
   end
 end
